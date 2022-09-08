@@ -8,11 +8,6 @@ on:
       - "[0-9]+.[0-9]+.[0-9]+"
     workflow_call:
 
-permissions:
-  contents: write
-  packages: write
-  issues: read
-
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -36,7 +31,7 @@ jobs:
         run: npm run build
       - uses: author/action-publish@stable
         env:
-          scan: "./dist",
-          registry: "https://npm.pkg.github.com/",
+          scan: "./dist"
+          registry: "https://npm.pkg.github.com/"
           # Typically an npm token
           REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
