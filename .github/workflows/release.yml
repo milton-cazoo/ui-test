@@ -33,4 +33,5 @@ jobs:
         env:
           scan: "./dist"
           # Typically an npm token
-          REGISTRY_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
