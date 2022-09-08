@@ -24,19 +24,15 @@ jobs:
           node-version: 16.15
           cache: npm
           cache-dependency-path: ./package-lock.json
-      - name: Configure GitHub npm
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "@milton-cazoo:registry=https://npm.pkg.github.com/">.npmrc
-          echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN">>.npmrc
       - name: Install Dependencies
         shell: bash
         run: npm ci
       - name: Run Build
         run: npm run build
       - uses: author/action-publish@stable
-        env:
+        with:
           scan: "./dist"
+          registry: "npm.pkg.github.com"
+        env:
           # Typically an npm token
           REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
