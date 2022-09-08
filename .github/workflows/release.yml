@@ -7,9 +7,14 @@ on:
     tags:
       - "[0-9]+.[0-9]+.[0-9]+"
     workflow_call:
-      secrets:
-        CAZOO_GITHUB_NPM_TOKEN:
-          required: true
+
+permissions:
+  contents: write
+  packages: write
+  issues: read
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   publish:
@@ -34,4 +39,3 @@ jobs:
           scan: "./dist"
           # Typically an npm token
           REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
