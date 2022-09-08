@@ -1,8 +1,9 @@
 {
-  "name": "rocketseat-challenge-ui-kit",
-  "version": "1.0.1",
-  "author": "Guilherme Rodz",
+  "name": "@ui-test/core",
+  "version": "1.0.0",
+  "author": "Milton Boos Junior",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 8080",

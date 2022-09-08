@@ -1,6 +1,6 @@
 {
   "name": "@ui-test/separator",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": "Milton Boos Junior",
   "main": "dist/components/Separator/index.js",
   "types": "dist/components/Separator/index.d.ts",

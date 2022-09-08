@@ -1,6 +1,6 @@
 {
   "name": "@ui-test/input",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": "Milton Boos Junior",
   "main": "dist/components/Input/index.js",
   "types": "dist/components/Input/index.d.ts",

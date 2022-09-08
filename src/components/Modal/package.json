@@ -1,6 +1,6 @@
 {
   "name": "@ui-test/modal",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": "Milton Boos Junior",
   "main": "dist/components/Modal/index.js",
   "types": "dist/components/Modal/index.d.ts",

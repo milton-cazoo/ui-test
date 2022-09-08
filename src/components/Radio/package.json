@@ -1,6 +1,6 @@
 {
   "name": "@ui-test/radio",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": "Milton Boos Junior",
   "main": "dist/components/Radio/index.js",
   "types": "dist/components/Radio/index.d.ts",
