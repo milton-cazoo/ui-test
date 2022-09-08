@@ -36,6 +36,7 @@ jobs:
         run: npm run build
       - uses: author/action-publish@stable
         env:
-          scan: "./dist"
+          scan: "./dist",
+          registry: "https://npm.pkg.github.com/",
           # Typically an npm token
           REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
