@@ -1,6 +1,6 @@
 {
   "name": "@milton-cazoo/ui-test-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Milton Boos Junior",
   "main": "dist/components/Button/index.js",
   "types": "dist/components/Button/index.d.ts",
