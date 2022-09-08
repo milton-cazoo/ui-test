@@ -78,7 +78,6 @@ async function run() {
   try {
     await createCorePackage();
     await createComponentPackages();
-    await includeFileInBuild("./README.md");
   } catch (err) {
     console.error(err);
     process.exit(1);

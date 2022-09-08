@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 8080",
-    "build": "tsc -p ."
+    "build": "tsc -p . && node ./copy-files.js"
   },
   "dependencies": {
     "polished": "^3.5.1",
