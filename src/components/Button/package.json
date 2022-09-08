@@ -1,5 +1,5 @@
 {
-  "name": "@ui-test/button",
+  "name": "@milton-cazoo/ui-test-button",
   "version": "1.0.0",
   "author": "Milton Boos Junior",
   "main": "dist/components/Button/index.js",
