@@ -5,6 +5,10 @@
   "main": "dist/components/Input/index.js",
   "types": "dist/components/Input/index.d.ts",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "tag": "latest"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:milton-cazoo/ui-test.git"
