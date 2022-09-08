@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  push:
+    branches-ignore:
+      - "**"
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+    workflow_call:
+      secrets:
+        CAZOO_GITHUB_NPM_TOKEN:
+          required: true
+
+jobs:
+  publish:
+    name: Publish Library
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node 14
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.15
+          cache: npm
+          cache-dependency-path: ./package-lock.json
+      - name: Install Dependencies
+        shell: bash
+        run: npm ci
+      - name: Run Build
+        run: npm run build
+      - uses: author/action-publish@stable
+        env:
+          scan: "./dist"
+          # Typically an npm token
+          REGISTRY_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

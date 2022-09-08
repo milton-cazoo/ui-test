@@ -1,0 +1,17 @@
+{
+  "name": "@ui-test/separator",
+  "version": "1.0",
+  "author": "Milton Boos Junior",
+  "main": "dist/components/Separator/index.js",
+  "types": "dist/components/Separator/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build:copy-files": "node ./copy-files.js",
+    "build": "tsc -p . && npm run build:copy-files"
+  },
+  "peerDependencies": {
+    "polished": "^3.5.1",
+    "styled-components": "^5.1.0",
+    "react": "^16.13.1"
+  }
+}
